@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - E-Commerce Monitoring System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+        .sidebar {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .sidebar .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            margin: 0.2rem 0;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link.active {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+        .main-content {
+            padding: 2rem;
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: none;
+        }
+        .chart-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: none;
+            text-align: center;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <nav class="col-md-3 col-lg-2 sidebar p-3">
+                <div class="text-center mb-4">
+                    <i class="fas fa-store fa-3x mb-3"></i>
+                    <h5>E-Commerce Monitor</h5>
+                </div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="fas fa-tachometer-alt me-2"></i>Dashboard
+                        </a>
+                    </li>
+                    {% if session.role in ['admin'] %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/admin">
+                            <i class="fas fa-cog me-2"></i>Admin Panel
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% if session.role in ['admin', 'cashier', 'customer'] %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/store">
+                            <i class="fas fa-shopping-cart me-2"></i>Store Interface
+                        </a>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/analytics">
+                            <i class="fas fa-chart-line me-2"></i>Analytics
+                        </a>
+                    </li>
+                    <li class="nav-item mt-4">
+                        <a class="nav-link text-danger" href="/logout">
+                            <i class="fas fa-sign-out-alt me-2"></i>Logout
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 main-content">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h2 class="mb-1">Business Analytics</h2>
+                        <p class="text-muted">Comprehensive insights and performance metrics</p>
+                    </div>
+                    <div class="text-end">
+                        <span class="badge bg-warning text-dark">{{ session.role|title }}</span>
+                    </div>
+                </div>
+
+                <!-- Key Metrics -->
+                <div class="row mb-4">
+                    <div class="col-md-3 mb-3">
+                        <div class="stat-card card h-100">
+                            <div class="card-body">
+                                <div class="stat-icon bg-primary text-white">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <h6 class="text-muted mb-1">Total Revenue</h6>
+                                <h3 class="mb-0" id="totalRevenue">$0</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="stat-card card h-100">
+                            <div class="card-body">
+                                <div class="stat-icon bg-success text-white">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                                <h6 class="text-muted mb-1">Total Orders</h6>
+                                <h3 class="mb-0" id="totalOrders">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="stat-card card h-100">
+                            <div class="card-body">
+                                <div class="stat-icon bg-info text-white">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h6 class="text-muted mb-1">Avg Order Value</h6>
+                                <h3 class="mb-0" id="avgOrderValue">$0</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="stat-card card h-100">
+                            <div class="card-body">
+                                <div class="stat-icon bg-warning text-white">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h6 class="text-muted mb-1">Active Customers</h6>
+                                <h3 class="mb-0" id="activeCustomers">0</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Row 1 -->
+                <div class="row mb-4">
+                    <div class="col-md-8">
+                        <div class="chart-container">
+                            <h5 class="mb-3">Sales Trend Analysis</h5>
+                            <div id="salesTrendChart" style="height: 400px;"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="chart-container">
+                            <h5 class="mb-3">Revenue by Category</h5>
+                            <div id="categoryRevenueChart" style="height: 400px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Row 2 -->
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="chart-container">
+                            <h5 class="mb-3">Top Performing Products</h5>
+                            <div id="topProductsChart" style="height: 400px;"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="chart-container">
+                            <h5 class="mb-3">Customer Analysis</h5>
+                            <div id="customerAnalysisChart" style="height: 400px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detailed Tables -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0"><i class="fas fa-trophy me-2"></i>Top Products by Revenue</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-sm" id="topProductsTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>Units Sold</th>
+                                                <th>Revenue</th>
+                                                <th>Avg Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Data will be loaded here -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0"><i class="fas fa-star me-2"></i>Top Customers by Spending</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-sm" id="topCustomersTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Customer</th>
+                                                <th>Orders</th>
+                                                <th>Total Spent</th>
+                                                <th>Avg Order</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Data will be loaded here -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+    <script>
+        let salesData = [];
+        let productsData = [];
+        let customersData = [];
+        let categoriesData = [];
+
+        // Load analytics data
+        async function loadAnalyticsData() {
+            try {
+                const [salesRes, productsRes, customersRes, categoriesRes, salesTrendRes, categoryRes, topProductsRes, customerAnalysisRes] = await Promise.all([
+                    fetch('/api/sales'),
+                    fetch('/api/products'),
+                    fetch('/api/customers'),
+                    fetch('/api/categories'),
+                    fetch('/api/analytics/sales-trend'),
+                    fetch('/api/analytics/category-performance'),
+                    fetch('/api/analytics/top-products'),
+                    fetch('/api/analytics/customer-analysis')
+                ]);
+
+                salesData = await salesRes.json();
+                productsData = await productsRes.json();
+                customersData = await customersRes.json();
+                categoriesData = await categoriesRes.json();
+                
+                const salesTrend = await salesTrendRes.json();
+                const categoryPerformance = await categoryRes.json();
+                const topProducts = await topProductsRes.json();
+                const customerAnalysis = await customerAnalysisRes.json();
+
+                updateKeyMetrics();
+                renderSalesTrendChart(salesTrend);
+                renderCategoryRevenueChart(categoryPerformance);
+                renderTopProductsChart(topProducts);
+                renderCustomerAnalysisChart(customerAnalysis);
+                renderTopProductsTable(topProducts);
+                renderTopCustomersTable(customerAnalysis);
+            } catch (error) {
+                console.error('Error loading analytics data:', error);
+            }
+        }
+
+        function updateKeyMetrics() {
+            const completedSales = salesData.filter(s => s.status === 'completed');
+            const totalRevenue = completedSales.reduce((sum, sale) => sum + sale.total, 0);
+            const totalOrders = completedSales.length;
+            const avgOrderValue = totalOrders > 0 ? totalRevenue / totalOrders : 0;
+            const activeCustomers = customersData.length;
+
+            document.getElementById('totalRevenue').textContent = `$${totalRevenue.toFixed(2)}`;
+            document.getElementById('totalOrders').textContent = totalOrders;
+            document.getElementById('avgOrderValue').textContent = `$${avgOrderValue.toFixed(2)}`;
+            document.getElementById('activeCustomers').textContent = activeCustomers;
+        }
+
+        function renderSalesTrendChart(data) {
+            const trace = {
+                x: data.dates,
+                y: data.values,
+                type: 'scatter',
+                mode: 'lines+markers',
+                name: 'Daily Revenue',
+                line: { color: '#667eea', width: 3 },
+                fill: 'tozeroy',
+                fillcolor: 'rgba(102, 126, 234, 0.1)'
+            };
+
+            const layout = {
+                title: '',
+                xaxis: { title: 'Date' },
+                yaxis: { title: 'Revenue ($)' },
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)',
+                margin: { t: 20, r: 20, b: 40, l: 60 }
+            };
+
+            Plotly.newPlot('salesTrendChart', [trace], layout, {responsive: true});
+        }
+
+        function renderCategoryRevenueChart(data) {
+            const labels = Object.keys(data);
+            const values = Object.values(data);
+            
+            const trace = {
+                labels: labels,
+                values: values,
+                type: 'pie',
+                marker: {
+                    colors: ['#667eea', '#764ba2', '#f093fb', '#f5576c', '#4facfe', '#00f2fe']
+                },
+                textinfo: 'label+percent',
+                textposition: 'outside'
+            };
+
+            const layout = {
+                title: '',
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)',
+                margin: { t: 20, r: 20, b: 20, l: 20 },
+                showlegend: true,
+                legend: {
+                    x: 0,
+                    y: 1
+                }
+            };
+
+            Plotly.newPlot('categoryRevenueChart', [trace], layout, {responsive: true});
+        }
+
+        function renderTopProductsChart(data) {
+            const trace = {
+                x: data.map(p => p.name),
+                y: data.map(p => p.revenue),
+                type: 'bar',
+                marker: { 
+                    color: '#764ba2',
+                    line: {
+                        color: '#667eea',
+                        width: 2
+                    }
+                }
+            };
+
+            const layout = {
+                title: '',
+                xaxis: { 
+                    title: 'Products',
+                    tickangle: -45
+                },
+                yaxis: { title: 'Revenue ($)' },
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)',
+                margin: { t: 20, r: 20, b: 80, l: 60 }
+            };
+
+            Plotly.newPlot('topProductsChart', [trace], layout, {responsive: true});
+        }
+
+        function renderCustomerAnalysisChart(data) {
+            const trace = {
+                x: data.slice(0, 10).map(c => c.name),
+                y: data.slice(0, 10).map(c => c.total_spent),
+                type: 'bar',
+                marker: { 
+                    color: '#f093fb',
+                    line: {
+                        color: '#764ba2',
+                        width: 2
+                    }
+                }
+            };
+
+            const layout = {
+                title: '',
+                xaxis: { 
+                    title: 'Customers',
+                    tickangle: -45
+                },
+                yaxis: { title: 'Total Spent ($)' },
+                paper_bgcolor: 'rgba(0,0,0,0)',
+                plot_bgcolor: 'rgba(0,0,0,0)',
+                margin: { t: 20, r: 20, b: 80, l: 60 }
+            };
+
+            Plotly.newPlot('customerAnalysisChart', [trace], layout, {responsive: true});
+        }
+
+        function renderTopProductsTable(data) {
+            const tbody = document.querySelector('#topProductsTable tbody');
+            tbody.innerHTML = data.slice(0, 10).map(product => `
+                <tr>
+                    <td>${product.name}</td>
+                    <td>${product.quantity}</td>
+                    <td>$${product.revenue.toFixed(2)}</td>
+                    <td>$${(product.revenue / product.quantity).toFixed(2)}</td>
+                </tr>
+            `).join('');
+        }
+
+        function renderTopCustomersTable(data) {
+            const tbody = document.querySelector('#topCustomersTable tbody');
+            tbody.innerHTML = data.slice(0, 10).map(customer => `
+                <tr>
+                    <td>${customer.name}</td>
+                    <td>${customer.total_orders}</td>
+                    <td>$${customer.total_spent.toFixed(2)}</td>
+                    <td>$${customer.avg_order_value.toFixed(2)}</td>
+                </tr>
+            `).join('');
+        }
+
+        // Auto-refresh data every 30 seconds
+        setInterval(loadAnalyticsData, 30000);
+
+        // WebSocket connection for real-time updates
+        const socket = io();
+        socket.on('sale_completed', function(data) {
+            loadAnalyticsData();
+        });
+
+        // Load data when page loads
+        document.addEventListener('DOMContentLoaded', loadAnalyticsData);
+    </script>
+</body>
+</html>

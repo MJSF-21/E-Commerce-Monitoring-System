@@ -1,0 +1,15 @@
+flask==2.3.3
+flask-sqlalchemy==3.0.5
+flask-socketio==5.3.6
+python-socketio==5.8.0
+flask-cors==4.0.0
+sqlalchemy==2.0.21
+pandas==2.1.1
+numpy==1.24.3
+plotly==5.17.0
+dash==2.14.1
+dash-bootstrap-components==1.5.0
+python-dotenv==1.0.0
+bcrypt==4.0.1
+PyJWT==2.8.0
+requests==2.31.0

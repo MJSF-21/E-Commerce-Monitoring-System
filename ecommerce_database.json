@@ -1,0 +1,3891 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@ecommerce.com",
+      "password": "$2b$12$SqQWHlf8ToWAEe2aKAhJSuwCpIKuzh6TV6l6JP9tyKH2Zh0CHlExy",
+      "role": "admin",
+      "full_name": "System Administrator",
+      "active": true,
+      "created_at": "2026-05-05T11:38:41.155864"
+    },
+    {
+      "id": 2,
+      "username": "cashier",
+      "email": "cashier@ecommerce.com",
+      "password": "$2b$12$mYHO.puAaPPUEBhseIv2w.T90HY1G47IK7qIzpe3yURsBBlehKseS",
+      "role": "cashier",
+      "full_name": "Cashier User",
+      "active": true,
+      "created_at": "2026-05-05T11:38:41.757186"
+    },
+    {
+      "id": 3,
+      "username": "Mayuri",
+      "email": "futanemayuri0@gmail.com",
+      "password": "$2b$12$KdIDHSJ3uwGltiYmoLtvCuZKF4C.vRxnybFYWzGXLXQQSuiELoVAG",
+      "role": "customer",
+      "full_name": "Mayuri Santosh Futane",
+      "active": true,
+      "created_at": "2026-05-05T12:09:55.026272"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop Pro 15\"",
+      "sku": "LP-001",
+      "barcode": "123456789001",
+      "price": 999.99,
+      "cost": 750.0,
+      "stock": 15,
+      "min_stock": 5,
+      "category_id": 1,
+      "supplier": "TechSupplier Inc",
+      "description": "High-performance laptop with 16GB RAM and 512GB SSD",
+      "weight": 2.5,
+      "dimensions": "35.5 x 23.5 x 1.8 cm",
+      "warranty": "2 years",
+      "active": true,
+      "created_at": "2026-05-05T11:38:42.038280"
+    },
+    {
+      "id": 2,
+      "name": "Wireless Mouse",
+      "sku": "WM-002",
+      "barcode": "123456789002",
+      "price": 25.99,
+      "cost": 15.0,
+      "stock": 50,
+      "min_stock": 10,
+      "category_id": 1,
+      "supplier": "TechSupplier Inc",
+      "description": "Ergonomic wireless mouse with precision tracking",
+      "weight": 0.1,
+      "dimensions": "10 x 6 x 3.5 cm",
+      "warranty": "1 year",
+      "active": true,
+      "created_at": "2026-05-05T11:38:42.038286"
+    },
+    {
+      "id": 3,
+      "name": "Mechanical Keyboard",
+      "sku": "KB-003",
+      "barcode": "123456789003",
+      "price": 79.99,
+      "cost": 45.0,
+      "stock": 27,
+      "min_stock": 8,
+      "category_id": 1,
+      "supplier": "Peripheral Co",
+      "description": "RGB mechanical keyboard with blue switches",
+      "weight": 0.8,
+      "dimensions": "44 x 13 x 4 cm",
+      "warranty": "1 year",
+      "active": true,
+      "created_at": "2026-05-05T11:38:42.038290"
+    },
+    {
+      "id": 4,
+      "name": "4K Monitor 27\"",
+      "sku": "MN-004",
+      "barcode": "123456789004",
+      "price": 299.99,
+      "cost": 200.0,
+      "stock": 20,
+      "min_stock": 5,
+      "category_id": 1,
+      "supplier": "DisplayTech",
+      "description": "4K UHD monitor with HDR support",
+      "weight": 5.2,
+      "dimensions": "61 x 36 x 20 cm",
+      "warranty": "3 years",
+      "active": true,
+      "created_at": "2026-05-05T11:38:42.038294"
+    },
+    {
+      "id": 5,
+      "name": "Executive Desk Chair",
+      "sku": "DC-005",
+      "barcode": "123456789005",
+      "price": 199.99,
+      "cost": 120.0,
+      "stock": 10,
+      "min_stock": 3,
+      "category_id": 2,
+      "supplier": "FurniturePlus",
+      "description": "Ergonomic office chair with lumbar support",
+      "weight": 15.0,
+      "dimensions": "65 x 65 x 120 cm",
+      "warranty": "5 years",
+      "active": true,
+      "created_at": "2026-05-05T11:38:42.038297"
+    },
+    {
+      "id": 6,
+      "name": "LED Desk Lamp",
+      "sku": "DL-006",
+      "barcode": "123456789006",
+      "price": 39.99,
+      "cost": 25.0,
+      "stock": 23,
+      "min_stock": 8,
+      "category_id": 2,
+      "supplier": "FurniturePlus",
+      "description": "Adjustable LED lamp with touch controls",
+      "weight": 1.2,
+      "dimensions": "15 x 15 x 45 cm",
+      "warranty": "2 years",
+      "active": true,
+      "created_at": "2026-05-05T11:38:42.038301"
+    },
+    {
+      "id": 7,
+      "name": "Premium Notebook Set",
+      "sku": "NB-007",
+      "barcode": "123456789007",
+      "price": 9.99,
+      "cost": 5.0,
+      "stock": 100,
+      "min_stock": 20,
+      "category_id": 3,
+      "supplier": "Office Supplies Co",
+      "description": "Set of 5 premium A4 notebooks",
+      "weight": 0.5,
+      "dimensions": "21 x 29.7 x 2 cm",
+      "warranty": "N/A",
+      "active": true,
+      "created_at": "2026-05-05T11:38:42.038305"
+    },
+    {
+      "id": 8,
+      "name": "Executive Pen Set",
+      "sku": "PS-008",
+      "barcode": "123456789008",
+      "price": 14.99,
+      "cost": 8.0,
+      "stock": 75,
+      "min_stock": 15,
+      "category_id": 3,
+      "supplier": "Office Supplies Co",
+      "description": "Luxury ballpoint pen set with gift box",
+      "weight": 0.3,
+      "dimensions": "20 x 10 x 3 cm",
+      "warranty": "1 year",
+      "active": true,
+      "created_at": "2026-05-05T11:38:42.038308"
+    },
+    {
+      "id": 9,
+      "name": "USB-C Hub 7-in-1",
+      "sku": "UH-009",
+      "barcode": "123456789009",
+      "price": 49.99,
+      "cost": 30.0,
+      "stock": 39,
+      "min_stock": 10,
+      "category_id": 4,
+      "supplier": "TechSupplier Inc",
+      "description": "7-in-1 USB-C hub with HDMI and SD card reader",
+      "weight": 0.05,
+      "dimensions": "12 x 4 x 1.5 cm",
+      "warranty": "1 year",
+      "active": true,
+      "created_at": "2026-05-05T11:38:42.038326"
+    },
+    {
+      "id": 10,
+      "name": "Phone Stand Adjustable",
+      "sku": "PH-010",
+      "barcode": "123456789010",
+      "price": 19.99,
+      "cost": 12.0,
+      "stock": 60,
+      "min_stock": 12,
+      "category_id": 4,
+      "supplier": "Accessory World",
+      "description": "Adjustable phone stand for all devices",
+      "weight": 0.2,
+      "dimensions": "8 x 8 x 12 cm",
+      "warranty": "6 months",
+      "active": true,
+      "created_at": "2026-05-05T11:38:42.038330"
+    },
+    {
+      "id": 11,
+      "name": "Office Suite Pro",
+      "sku": "SW-011",
+      "barcode": "123456789011",
+      "price": 149.99,
+      "cost": 50.0,
+      "stock": 999,
+      "min_stock": 100,
+      "category_id": 5,
+      "supplier": "Software Corp",
+      "description": "Professional office suite license (1 year)",
+      "weight": 0,
+      "dimensions": "Digital",
+      "warranty": "1 year support",
+      "active": true,
+      "created_at": "2026-05-05T11:38:42.038334"
+    },
+    {
+      "id": 12,
+      "name": "Antivirus Premium",
+      "sku": "SW-012",
+      "barcode": "123456789012",
+      "price": 79.99,
+      "cost": 25.0,
+      "stock": 999,
+      "min_stock": 50,
+      "category_id": 5,
+      "supplier": "Security Software Inc",
+      "description": "Premium antivirus protection (3 devices)",
+      "weight": 0,
+      "dimensions": "Digital",
+      "warranty": "1 year updates",
+      "active": true,
+      "created_at": "2026-05-05T11:38:42.038338"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronics",
+      "description": "Electronic devices and accessories",
+      "created_at": "2026-05-05T11:38:40.819422"
+    },
+    {
+      "id": 2,
+      "name": "Furniture",
+      "description": "Office and home furniture",
+      "created_at": "2026-05-05T11:38:40.819474"
+    },
+    {
+      "id": 3,
+      "name": "Office Supplies",
+      "description": "Stationery and office items",
+      "created_at": "2026-05-05T11:38:40.819478"
+    },
+    {
+      "id": 4,
+      "name": "Accessories",
+      "description": "Computer and mobile accessories",
+      "created_at": "2026-05-05T11:38:40.819481"
+    },
+    {
+      "id": 5,
+      "name": "Software",
+      "description": "Digital products and licenses",
+      "created_at": "2026-05-05T11:38:40.819484"
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "sale_number": "SALE-0001",
+      "customer_id": 1,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 8,
+          "product_name": "Executive Pen Set",
+          "sku": "PS-008",
+          "quantity": 2,
+          "unit_price": 14.99,
+          "discount": 0,
+          "total_price": 29.98
+        },
+        {
+          "product_id": 2,
+          "product_name": "Wireless Mouse",
+          "sku": "WM-002",
+          "quantity": 2,
+          "unit_price": 25.99,
+          "discount": 0,
+          "total_price": 51.98
+        }
+      ],
+      "subtotal": 81.96,
+      "tax": 6.5568,
+      "total": 88.51679999999999,
+      "discount": 0,
+      "payment_method": "card",
+      "status": "pending",
+      "sale_date": "2026-04-10T11:38:42.038405",
+      "notes": "Transaction notes for sale #1",
+      "invoice_number": "INV-0001",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 2,
+      "sale_number": "SALE-0002",
+      "customer_id": 5,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 11,
+          "product_name": "Office Suite Pro",
+          "sku": "SW-011",
+          "quantity": 3,
+          "unit_price": 149.99,
+          "discount": 0,
+          "total_price": 449.97
+        },
+        {
+          "product_id": 5,
+          "product_name": "Executive Desk Chair",
+          "sku": "DC-005",
+          "quantity": 2,
+          "unit_price": 199.99,
+          "discount": 0,
+          "total_price": 399.98
+        }
+      ],
+      "subtotal": 849.95,
+      "tax": 67.99600000000001,
+      "total": 917.946,
+      "discount": 0,
+      "payment_method": "cash",
+      "status": "pending",
+      "sale_date": "2026-03-17T11:38:42.038455",
+      "notes": "Transaction notes for sale #2",
+      "invoice_number": "INV-0002",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 3,
+      "sale_number": "SALE-0003",
+      "customer_id": 2,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 5,
+          "product_name": "Executive Desk Chair",
+          "sku": "DC-005",
+          "quantity": 1,
+          "unit_price": 199.99,
+          "discount": 0,
+          "total_price": 199.99
+        },
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 79.99
+        },
+        {
+          "product_id": 5,
+          "product_name": "Executive Desk Chair",
+          "sku": "DC-005",
+          "quantity": 2,
+          "unit_price": 199.99,
+          "discount": 0,
+          "total_price": 399.98
+        },
+        {
+          "product_id": 11,
+          "product_name": "Office Suite Pro",
+          "sku": "SW-011",
+          "quantity": 2,
+          "unit_price": 149.99,
+          "discount": 0,
+          "total_price": 299.98
+        },
+        {
+          "product_id": 8,
+          "product_name": "Executive Pen Set",
+          "sku": "PS-008",
+          "quantity": 2,
+          "unit_price": 14.99,
+          "discount": 0,
+          "total_price": 29.98
+        }
+      ],
+      "subtotal": 1009.9200000000001,
+      "tax": 80.79360000000001,
+      "total": 1090.7136,
+      "discount": 0,
+      "payment_method": "cash",
+      "status": "pending",
+      "sale_date": "2026-03-25T11:38:42.038476",
+      "notes": "Transaction notes for sale #3",
+      "invoice_number": "INV-0003",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 4,
+      "sale_number": "SALE-0004",
+      "customer_id": 2,
+      "user_id": 2,
+      "items": [
+        {
+          "product_id": 8,
+          "product_name": "Executive Pen Set",
+          "sku": "PS-008",
+          "quantity": 2,
+          "unit_price": 14.99,
+          "discount": 0,
+          "total_price": 29.98
+        },
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 2,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 599.98
+        },
+        {
+          "product_id": 12,
+          "product_name": "Antivirus Premium",
+          "sku": "SW-012",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 79.99
+        },
+        {
+          "product_id": 7,
+          "product_name": "Premium Notebook Set",
+          "sku": "NB-007",
+          "quantity": 1,
+          "unit_price": 9.99,
+          "discount": 0,
+          "total_price": 9.99
+        }
+      ],
+      "subtotal": 719.94,
+      "tax": 57.595200000000006,
+      "total": 777.5352,
+      "discount": 0,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-02-07T11:38:42.038496",
+      "notes": "Transaction notes for sale #4",
+      "invoice_number": "INV-0004",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 5,
+      "sale_number": "SALE-0005",
+      "customer_id": 1,
+      "user_id": 2,
+      "items": [
+        {
+          "product_id": 7,
+          "product_name": "Premium Notebook Set",
+          "sku": "NB-007",
+          "quantity": 2,
+          "unit_price": 9.99,
+          "discount": 0,
+          "total_price": 19.98
+        },
+        {
+          "product_id": 11,
+          "product_name": "Office Suite Pro",
+          "sku": "SW-011",
+          "quantity": 2,
+          "unit_price": 149.99,
+          "discount": 0,
+          "total_price": 299.98
+        },
+        {
+          "product_id": 8,
+          "product_name": "Executive Pen Set",
+          "sku": "PS-008",
+          "quantity": 3,
+          "unit_price": 14.99,
+          "discount": 0,
+          "total_price": 44.97
+        },
+        {
+          "product_id": 2,
+          "product_name": "Wireless Mouse",
+          "sku": "WM-002",
+          "quantity": 3,
+          "unit_price": 25.99,
+          "discount": 0,
+          "total_price": 77.97
+        }
+      ],
+      "subtotal": 442.9000000000001,
+      "tax": 35.43200000000001,
+      "total": 478.3320000000001,
+      "discount": 0,
+      "payment_method": "transfer",
+      "status": "completed",
+      "sale_date": "2026-04-01T11:38:42.038514",
+      "notes": "Transaction notes for sale #5",
+      "invoice_number": "INV-0005",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 6,
+      "sale_number": "SALE-0006",
+      "customer_id": 3,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 7,
+          "product_name": "Premium Notebook Set",
+          "sku": "NB-007",
+          "quantity": 3,
+          "unit_price": 9.99,
+          "discount": 0,
+          "total_price": 29.97
+        },
+        {
+          "product_id": 7,
+          "product_name": "Premium Notebook Set",
+          "sku": "NB-007",
+          "quantity": 1,
+          "unit_price": 9.99,
+          "discount": 0,
+          "total_price": 9.99
+        }
+      ],
+      "subtotal": 35.964,
+      "tax": 2.87712,
+      "total": 38.84112,
+      "discount": 3.9960000000000004,
+      "payment_method": "card",
+      "status": "completed",
+      "sale_date": "2026-02-05T11:38:42.038539",
+      "notes": "Transaction notes for sale #6",
+      "invoice_number": "INV-0006",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 7,
+      "sale_number": "SALE-0007",
+      "customer_id": 1,
+      "user_id": 1,
+      "items": [
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 3,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 239.96999999999997
+        },
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 1,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 299.99
+        },
+        {
+          "product_id": 6,
+          "product_name": "LED Desk Lamp",
+          "sku": "DL-006",
+          "quantity": 1,
+          "unit_price": 39.99,
+          "discount": 0,
+          "total_price": 39.99
+        },
+        {
+          "product_id": 2,
+          "product_name": "Wireless Mouse",
+          "sku": "WM-002",
+          "quantity": 1,
+          "unit_price": 25.99,
+          "discount": 0,
+          "total_price": 25.99
+        },
+        {
+          "product_id": 11,
+          "product_name": "Office Suite Pro",
+          "sku": "SW-011",
+          "quantity": 1,
+          "unit_price": 149.99,
+          "discount": 0,
+          "total_price": 149.99
+        }
+      ],
+      "subtotal": 680.3370000000001,
+      "tax": 54.42696000000001,
+      "total": 734.7639600000001,
+      "discount": 75.593,
+      "payment_method": "transfer",
+      "status": "completed",
+      "sale_date": "2026-05-02T11:38:42.038555",
+      "notes": "Transaction notes for sale #7",
+      "invoice_number": "INV-0007",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 8,
+      "sale_number": "SALE-0008",
+      "customer_id": 2,
+      "user_id": 1,
+      "items": [
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 2,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 1999.98
+        },
+        {
+          "product_id": 11,
+          "product_name": "Office Suite Pro",
+          "sku": "SW-011",
+          "quantity": 2,
+          "unit_price": 149.99,
+          "discount": 0,
+          "total_price": 299.98
+        },
+        {
+          "product_id": 6,
+          "product_name": "LED Desk Lamp",
+          "sku": "DL-006",
+          "quantity": 2,
+          "unit_price": 39.99,
+          "discount": 0,
+          "total_price": 79.98
+        },
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 1,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 999.99
+        },
+        {
+          "product_id": 5,
+          "product_name": "Executive Desk Chair",
+          "sku": "DC-005",
+          "quantity": 3,
+          "unit_price": 199.99,
+          "discount": 0,
+          "total_price": 599.97
+        }
+      ],
+      "subtotal": 3581.9100000000003,
+      "tax": 286.55280000000005,
+      "total": 3868.4628000000002,
+      "discount": 397.99000000000007,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-02-17T11:38:42.038570",
+      "notes": "Transaction notes for sale #8",
+      "invoice_number": "INV-0008",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 9,
+      "sale_number": "SALE-0009",
+      "customer_id": 2,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 2,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 1999.98
+        },
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 2,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 1999.98
+        }
+      ],
+      "subtotal": 3999.96,
+      "tax": 319.9968,
+      "total": 4319.9568,
+      "discount": 0,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-04-23T11:38:42.038585",
+      "notes": "Transaction notes for sale #9",
+      "invoice_number": "INV-0009",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 10,
+      "sale_number": "SALE-0010",
+      "customer_id": 4,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 12,
+          "product_name": "Antivirus Premium",
+          "sku": "SW-012",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 79.99
+        },
+        {
+          "product_id": 7,
+          "product_name": "Premium Notebook Set",
+          "sku": "NB-007",
+          "quantity": 2,
+          "unit_price": 9.99,
+          "discount": 0,
+          "total_price": 19.98
+        },
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 3,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 149.97
+        },
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 2,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 99.98
+        },
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 3,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 2999.9700000000003
+        }
+      ],
+      "subtotal": 3349.8900000000003,
+      "tax": 267.99120000000005,
+      "total": 3617.8812000000003,
+      "discount": 0,
+      "payment_method": "card",
+      "status": "completed",
+      "sale_date": "2026-03-20T11:38:42.038595",
+      "notes": "Transaction notes for sale #10",
+      "invoice_number": "INV-0010",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 11,
+      "sale_number": "SALE-0011",
+      "customer_id": 5,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 12,
+          "product_name": "Antivirus Premium",
+          "sku": "SW-012",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 79.99
+        },
+        {
+          "product_id": 11,
+          "product_name": "Office Suite Pro",
+          "sku": "SW-011",
+          "quantity": 2,
+          "unit_price": 149.99,
+          "discount": 0,
+          "total_price": 299.98
+        }
+      ],
+      "subtotal": 379.97,
+      "tax": 30.397600000000004,
+      "total": 410.36760000000004,
+      "discount": 0,
+      "payment_method": "card",
+      "status": "completed",
+      "sale_date": "2026-03-09T11:38:42.038609",
+      "notes": "Transaction notes for sale #11",
+      "invoice_number": "INV-0011",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 12,
+      "sale_number": "SALE-0012",
+      "customer_id": 5,
+      "user_id": 2,
+      "items": [
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 1,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 299.99
+        },
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 2,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 1999.98
+        }
+      ],
+      "subtotal": 2299.9700000000003,
+      "tax": 183.99760000000003,
+      "total": 2483.9676000000004,
+      "discount": 0,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-03-10T11:38:42.038620",
+      "notes": "Transaction notes for sale #12",
+      "invoice_number": "INV-0012",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 13,
+      "sale_number": "SALE-0013",
+      "customer_id": 4,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 7,
+          "product_name": "Premium Notebook Set",
+          "sku": "NB-007",
+          "quantity": 1,
+          "unit_price": 9.99,
+          "discount": 0,
+          "total_price": 9.99
+        },
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 2,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 599.98
+        },
+        {
+          "product_id": 6,
+          "product_name": "LED Desk Lamp",
+          "sku": "DL-006",
+          "quantity": 1,
+          "unit_price": 39.99,
+          "discount": 0,
+          "total_price": 39.99
+        },
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 1,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 999.99
+        }
+      ],
+      "subtotal": 1484.955,
+      "tax": 118.79639999999999,
+      "total": 1603.7513999999999,
+      "discount": 164.995,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-03-21T11:38:42.038630",
+      "notes": "Transaction notes for sale #13",
+      "invoice_number": "INV-0013",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 14,
+      "sale_number": "SALE-0014",
+      "customer_id": 2,
+      "user_id": 2,
+      "items": [
+        {
+          "product_id": 12,
+          "product_name": "Antivirus Premium",
+          "sku": "SW-012",
+          "quantity": 3,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 239.96999999999997
+        },
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 3,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 899.97
+        },
+        {
+          "product_id": 7,
+          "product_name": "Premium Notebook Set",
+          "sku": "NB-007",
+          "quantity": 3,
+          "unit_price": 9.99,
+          "discount": 0,
+          "total_price": 29.97
+        }
+      ],
+      "subtotal": 1052.919,
+      "tax": 84.23352000000001,
+      "total": 1137.15252,
+      "discount": 116.99100000000001,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-04-04T11:38:42.038642",
+      "notes": "Transaction notes for sale #14",
+      "invoice_number": "INV-0014",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 15,
+      "sale_number": "SALE-0015",
+      "customer_id": 5,
+      "user_id": 2,
+      "items": [
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 2,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 1999.98
+        }
+      ],
+      "subtotal": 1799.982,
+      "tax": 143.99856,
+      "total": 1943.98056,
+      "discount": 199.99800000000002,
+      "payment_method": "transfer",
+      "status": "completed",
+      "sale_date": "2026-04-30T11:38:42.038653",
+      "notes": "Transaction notes for sale #15",
+      "invoice_number": "INV-0015",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 16,
+      "sale_number": "SALE-0016",
+      "customer_id": 2,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 12,
+          "product_name": "Antivirus Premium",
+          "sku": "SW-012",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 79.99
+        },
+        {
+          "product_id": 10,
+          "product_name": "Phone Stand Adjustable",
+          "sku": "PH-010",
+          "quantity": 3,
+          "unit_price": 19.99,
+          "discount": 0,
+          "total_price": 59.97
+        },
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 1,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 999.99
+        },
+        {
+          "product_id": 12,
+          "product_name": "Antivirus Premium",
+          "sku": "SW-012",
+          "quantity": 3,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 239.96999999999997
+        }
+      ],
+      "subtotal": 1241.928,
+      "tax": 99.35424,
+      "total": 1341.28224,
+      "discount": 137.99200000000002,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-04-09T11:38:42.038662",
+      "notes": "Transaction notes for sale #16",
+      "invoice_number": "INV-0016",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 17,
+      "sale_number": "SALE-0017",
+      "customer_id": 1,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 2,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 599.98
+        },
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 1,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 299.99
+        }
+      ],
+      "subtotal": 899.97,
+      "tax": 71.9976,
+      "total": 971.9676000000001,
+      "discount": 0,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-03-02T11:38:42.038676",
+      "notes": "Transaction notes for sale #17",
+      "invoice_number": "INV-0017",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 18,
+      "sale_number": "SALE-0018",
+      "customer_id": 1,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 3,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 899.97
+        }
+      ],
+      "subtotal": 899.97,
+      "tax": 71.9976,
+      "total": 971.9676000000001,
+      "discount": 0,
+      "payment_method": "transfer",
+      "status": "completed",
+      "sale_date": "2026-05-05T11:38:42.038688",
+      "notes": "Transaction notes for sale #18",
+      "invoice_number": "INV-0018",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 19,
+      "sale_number": "SALE-0019",
+      "customer_id": 1,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 12,
+          "product_name": "Antivirus Premium",
+          "sku": "SW-012",
+          "quantity": 2,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 159.98
+        }
+      ],
+      "subtotal": 159.98,
+      "tax": 12.798399999999999,
+      "total": 172.77839999999998,
+      "discount": 0,
+      "payment_method": "transfer",
+      "status": "completed",
+      "sale_date": "2026-02-09T11:38:42.038698",
+      "notes": "Transaction notes for sale #19",
+      "invoice_number": "INV-0019",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 20,
+      "sale_number": "SALE-0020",
+      "customer_id": 2,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 2,
+          "product_name": "Wireless Mouse",
+          "sku": "WM-002",
+          "quantity": 1,
+          "unit_price": 25.99,
+          "discount": 0,
+          "total_price": 25.99
+        },
+        {
+          "product_id": 10,
+          "product_name": "Phone Stand Adjustable",
+          "sku": "PH-010",
+          "quantity": 1,
+          "unit_price": 19.99,
+          "discount": 0,
+          "total_price": 19.99
+        },
+        {
+          "product_id": 2,
+          "product_name": "Wireless Mouse",
+          "sku": "WM-002",
+          "quantity": 2,
+          "unit_price": 25.99,
+          "discount": 0,
+          "total_price": 51.98
+        },
+        {
+          "product_id": 7,
+          "product_name": "Premium Notebook Set",
+          "sku": "NB-007",
+          "quantity": 3,
+          "unit_price": 9.99,
+          "discount": 0,
+          "total_price": 29.97
+        }
+      ],
+      "subtotal": 127.92999999999999,
+      "tax": 10.234399999999999,
+      "total": 138.1644,
+      "discount": 0,
+      "payment_method": "card",
+      "status": "completed",
+      "sale_date": "2026-03-10T11:38:42.038709",
+      "notes": "Transaction notes for sale #20",
+      "invoice_number": "INV-0020",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 21,
+      "sale_number": "SALE-0021",
+      "customer_id": 3,
+      "user_id": 1,
+      "items": [
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 1,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 49.99
+        },
+        {
+          "product_id": 8,
+          "product_name": "Executive Pen Set",
+          "sku": "PS-008",
+          "quantity": 2,
+          "unit_price": 14.99,
+          "discount": 0,
+          "total_price": 29.98
+        }
+      ],
+      "subtotal": 71.973,
+      "tax": 5.75784,
+      "total": 77.73084,
+      "discount": 7.997,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-02-05T11:38:42.038720",
+      "notes": "Transaction notes for sale #21",
+      "invoice_number": "INV-0021",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 22,
+      "sale_number": "SALE-0022",
+      "customer_id": 2,
+      "user_id": 1,
+      "items": [
+        {
+          "product_id": 11,
+          "product_name": "Office Suite Pro",
+          "sku": "SW-011",
+          "quantity": 3,
+          "unit_price": 149.99,
+          "discount": 0,
+          "total_price": 449.97
+        }
+      ],
+      "subtotal": 449.97,
+      "tax": 35.997600000000006,
+      "total": 485.96760000000006,
+      "discount": 0,
+      "payment_method": "card",
+      "status": "completed",
+      "sale_date": "2026-03-23T11:38:42.038741",
+      "notes": "Transaction notes for sale #22",
+      "invoice_number": "INV-0022",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 23,
+      "sale_number": "SALE-0023",
+      "customer_id": 5,
+      "user_id": 2,
+      "items": [
+        {
+          "product_id": 5,
+          "product_name": "Executive Desk Chair",
+          "sku": "DC-005",
+          "quantity": 3,
+          "unit_price": 199.99,
+          "discount": 0,
+          "total_price": 599.97
+        },
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 3,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 2999.9700000000003
+        },
+        {
+          "product_id": 2,
+          "product_name": "Wireless Mouse",
+          "sku": "WM-002",
+          "quantity": 2,
+          "unit_price": 25.99,
+          "discount": 0,
+          "total_price": 51.98
+        },
+        {
+          "product_id": 7,
+          "product_name": "Premium Notebook Set",
+          "sku": "NB-007",
+          "quantity": 3,
+          "unit_price": 9.99,
+          "discount": 0,
+          "total_price": 29.97
+        }
+      ],
+      "subtotal": 3681.8900000000003,
+      "tax": 294.55120000000005,
+      "total": 3976.4412,
+      "discount": 0,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-03-26T11:38:42.038749",
+      "notes": "Transaction notes for sale #23",
+      "invoice_number": "INV-0023",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 24,
+      "sale_number": "SALE-0024",
+      "customer_id": 4,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 1,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 49.99
+        },
+        {
+          "product_id": 8,
+          "product_name": "Executive Pen Set",
+          "sku": "PS-008",
+          "quantity": 3,
+          "unit_price": 14.99,
+          "discount": 0,
+          "total_price": 44.97
+        },
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 3,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 2999.9700000000003
+        },
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 3,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 149.97
+        },
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 79.99
+        }
+      ],
+      "subtotal": 2992.401,
+      "tax": 239.39208,
+      "total": 3231.79308,
+      "discount": 332.48900000000003,
+      "payment_method": "card",
+      "status": "completed",
+      "sale_date": "2026-03-01T11:38:42.038761",
+      "notes": "Transaction notes for sale #24",
+      "invoice_number": "INV-0024",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 25,
+      "sale_number": "SALE-0025",
+      "customer_id": 2,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 12,
+          "product_name": "Antivirus Premium",
+          "sku": "SW-012",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 79.99
+        },
+        {
+          "product_id": 11,
+          "product_name": "Office Suite Pro",
+          "sku": "SW-011",
+          "quantity": 2,
+          "unit_price": 149.99,
+          "discount": 0,
+          "total_price": 299.98
+        },
+        {
+          "product_id": 2,
+          "product_name": "Wireless Mouse",
+          "sku": "WM-002",
+          "quantity": 1,
+          "unit_price": 25.99,
+          "discount": 0,
+          "total_price": 25.99
+        }
+      ],
+      "subtotal": 365.36400000000003,
+      "tax": 29.22912,
+      "total": 394.59312000000006,
+      "discount": 40.596000000000004,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-03-16T11:38:42.038774",
+      "notes": "Transaction notes for sale #25",
+      "invoice_number": "INV-0025",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 26,
+      "sale_number": "SALE-0026",
+      "customer_id": 3,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 3,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 899.97
+        }
+      ],
+      "subtotal": 899.97,
+      "tax": 71.9976,
+      "total": 971.9676000000001,
+      "discount": 0,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-03-07T11:38:42.038786",
+      "notes": "Transaction notes for sale #26",
+      "invoice_number": "INV-0026",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 27,
+      "sale_number": "SALE-0027",
+      "customer_id": 1,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 2,
+          "product_name": "Wireless Mouse",
+          "sku": "WM-002",
+          "quantity": 1,
+          "unit_price": 25.99,
+          "discount": 0,
+          "total_price": 25.99
+        },
+        {
+          "product_id": 5,
+          "product_name": "Executive Desk Chair",
+          "sku": "DC-005",
+          "quantity": 3,
+          "unit_price": 199.99,
+          "discount": 0,
+          "total_price": 599.97
+        },
+        {
+          "product_id": 8,
+          "product_name": "Executive Pen Set",
+          "sku": "PS-008",
+          "quantity": 2,
+          "unit_price": 14.99,
+          "discount": 0,
+          "total_price": 29.98
+        },
+        {
+          "product_id": 12,
+          "product_name": "Antivirus Premium",
+          "sku": "SW-012",
+          "quantity": 2,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 159.98
+        }
+      ],
+      "subtotal": 815.9200000000001,
+      "tax": 65.2736,
+      "total": 881.1936000000001,
+      "discount": 0,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-02-05T11:38:42.038836",
+      "notes": "Transaction notes for sale #27",
+      "invoice_number": "INV-0027",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 28,
+      "sale_number": "SALE-0028",
+      "customer_id": 3,
+      "user_id": 1,
+      "items": [
+        {
+          "product_id": 10,
+          "product_name": "Phone Stand Adjustable",
+          "sku": "PH-010",
+          "quantity": 3,
+          "unit_price": 19.99,
+          "discount": 0,
+          "total_price": 59.97
+        }
+      ],
+      "subtotal": 59.97,
+      "tax": 4.7976,
+      "total": 64.7676,
+      "discount": 0,
+      "payment_method": "transfer",
+      "status": "completed",
+      "sale_date": "2026-03-01T11:38:42.038849",
+      "notes": "Transaction notes for sale #28",
+      "invoice_number": "INV-0028",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 29,
+      "sale_number": "SALE-0029",
+      "customer_id": 4,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 3,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 149.97
+        },
+        {
+          "product_id": 6,
+          "product_name": "LED Desk Lamp",
+          "sku": "DL-006",
+          "quantity": 1,
+          "unit_price": 39.99,
+          "discount": 0,
+          "total_price": 39.99
+        }
+      ],
+      "subtotal": 170.964,
+      "tax": 13.67712,
+      "total": 184.64112,
+      "discount": 18.996000000000002,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-03-15T11:38:42.038857",
+      "notes": "Transaction notes for sale #29",
+      "invoice_number": "INV-0029",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 30,
+      "sale_number": "SALE-0030",
+      "customer_id": 5,
+      "user_id": 1,
+      "items": [
+        {
+          "product_id": 8,
+          "product_name": "Executive Pen Set",
+          "sku": "PS-008",
+          "quantity": 3,
+          "unit_price": 14.99,
+          "discount": 0,
+          "total_price": 44.97
+        }
+      ],
+      "subtotal": 44.97,
+      "tax": 3.5976,
+      "total": 48.5676,
+      "discount": 0,
+      "payment_method": "transfer",
+      "status": "completed",
+      "sale_date": "2026-02-09T11:38:42.038866",
+      "notes": "Transaction notes for sale #30",
+      "invoice_number": "INV-0030",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 31,
+      "sale_number": "SALE-0031",
+      "customer_id": 3,
+      "user_id": 1,
+      "items": [
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 1,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 299.99
+        },
+        {
+          "product_id": 10,
+          "product_name": "Phone Stand Adjustable",
+          "sku": "PH-010",
+          "quantity": 1,
+          "unit_price": 19.99,
+          "discount": 0,
+          "total_price": 19.99
+        }
+      ],
+      "subtotal": 287.982,
+      "tax": 23.038560000000004,
+      "total": 311.02056000000005,
+      "discount": 31.998000000000005,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-03-12T11:38:42.038874",
+      "notes": "Transaction notes for sale #31",
+      "invoice_number": "INV-0031",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 32,
+      "sale_number": "SALE-0032",
+      "customer_id": 2,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 2,
+          "product_name": "Wireless Mouse",
+          "sku": "WM-002",
+          "quantity": 3,
+          "unit_price": 25.99,
+          "discount": 0,
+          "total_price": 77.97
+        },
+        {
+          "product_id": 12,
+          "product_name": "Antivirus Premium",
+          "sku": "SW-012",
+          "quantity": 2,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 159.98
+        },
+        {
+          "product_id": 11,
+          "product_name": "Office Suite Pro",
+          "sku": "SW-011",
+          "quantity": 1,
+          "unit_price": 149.99,
+          "discount": 0,
+          "total_price": 149.99
+        },
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 3,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 2999.9700000000003
+        },
+        {
+          "product_id": 5,
+          "product_name": "Executive Desk Chair",
+          "sku": "DC-005",
+          "quantity": 3,
+          "unit_price": 199.99,
+          "discount": 0,
+          "total_price": 599.97
+        }
+      ],
+      "subtotal": 3589.092,
+      "tax": 287.12736,
+      "total": 3876.21936,
+      "discount": 398.788,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-03-26T11:38:42.038888",
+      "notes": "Transaction notes for sale #32",
+      "invoice_number": "INV-0032",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 33,
+      "sale_number": "SALE-0033",
+      "customer_id": 5,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 2,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 159.98
+        },
+        {
+          "product_id": 12,
+          "product_name": "Antivirus Premium",
+          "sku": "SW-012",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 79.99
+        },
+        {
+          "product_id": 7,
+          "product_name": "Premium Notebook Set",
+          "sku": "NB-007",
+          "quantity": 1,
+          "unit_price": 9.99,
+          "discount": 0,
+          "total_price": 9.99
+        },
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 3,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 899.97
+        },
+        {
+          "product_id": 7,
+          "product_name": "Premium Notebook Set",
+          "sku": "NB-007",
+          "quantity": 3,
+          "unit_price": 9.99,
+          "discount": 0,
+          "total_price": 29.97
+        }
+      ],
+      "subtotal": 1179.9,
+      "tax": 94.39200000000001,
+      "total": 1274.2920000000001,
+      "discount": 0,
+      "payment_method": "transfer",
+      "status": "completed",
+      "sale_date": "2026-05-03T11:38:42.038901",
+      "notes": "Transaction notes for sale #33",
+      "invoice_number": "INV-0033",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 34,
+      "sale_number": "SALE-0034",
+      "customer_id": 4,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 2,
+          "product_name": "Wireless Mouse",
+          "sku": "WM-002",
+          "quantity": 3,
+          "unit_price": 25.99,
+          "discount": 0,
+          "total_price": 77.97
+        },
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 3,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 899.97
+        },
+        {
+          "product_id": 7,
+          "product_name": "Premium Notebook Set",
+          "sku": "NB-007",
+          "quantity": 3,
+          "unit_price": 9.99,
+          "discount": 0,
+          "total_price": 29.97
+        },
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 3,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 899.97
+        }
+      ],
+      "subtotal": 1907.88,
+      "tax": 152.6304,
+      "total": 2060.5104,
+      "discount": 0,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-04-28T11:38:42.038916",
+      "notes": "Transaction notes for sale #34",
+      "invoice_number": "INV-0034",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 35,
+      "sale_number": "SALE-0035",
+      "customer_id": 5,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 3,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 149.97
+        },
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 2,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 159.98
+        },
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 79.99
+        },
+        {
+          "product_id": 10,
+          "product_name": "Phone Stand Adjustable",
+          "sku": "PH-010",
+          "quantity": 1,
+          "unit_price": 19.99,
+          "discount": 0,
+          "total_price": 19.99
+        },
+        {
+          "product_id": 12,
+          "product_name": "Antivirus Premium",
+          "sku": "SW-012",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 79.99
+        }
+      ],
+      "subtotal": 489.92,
+      "tax": 39.1936,
+      "total": 529.1136,
+      "discount": 0,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-04-22T11:38:42.038929",
+      "notes": "Transaction notes for sale #35",
+      "invoice_number": "INV-0035",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 36,
+      "sale_number": "SALE-0036",
+      "customer_id": 5,
+      "user_id": 1,
+      "items": [
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 3,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 899.97
+        },
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 79.99
+        }
+      ],
+      "subtotal": 979.96,
+      "tax": 78.3968,
+      "total": 1058.3568,
+      "discount": 0,
+      "payment_method": "card",
+      "status": "completed",
+      "sale_date": "2026-02-27T11:38:42.038941",
+      "notes": "Transaction notes for sale #36",
+      "invoice_number": "INV-0036",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 37,
+      "sale_number": "SALE-0037",
+      "customer_id": 1,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 1,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 299.99
+        },
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 3,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 149.97
+        },
+        {
+          "product_id": 5,
+          "product_name": "Executive Desk Chair",
+          "sku": "DC-005",
+          "quantity": 2,
+          "unit_price": 199.99,
+          "discount": 0,
+          "total_price": 399.98
+        },
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 3,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 149.97
+        }
+      ],
+      "subtotal": 899.9190000000001,
+      "tax": 71.99352,
+      "total": 971.9125200000001,
+      "discount": 99.99100000000001,
+      "payment_method": "card",
+      "status": "completed",
+      "sale_date": "2026-04-27T11:38:42.038951",
+      "notes": "Transaction notes for sale #37",
+      "invoice_number": "INV-0037",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 38,
+      "sale_number": "SALE-0038",
+      "customer_id": 1,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 79.99
+        },
+        {
+          "product_id": 5,
+          "product_name": "Executive Desk Chair",
+          "sku": "DC-005",
+          "quantity": 1,
+          "unit_price": 199.99,
+          "discount": 0,
+          "total_price": 199.99
+        },
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 3,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 2999.9700000000003
+        },
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 1,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 49.99
+        }
+      ],
+      "subtotal": 2996.946,
+      "tax": 239.75567999999998,
+      "total": 3236.70168,
+      "discount": 332.994,
+      "payment_method": "transfer",
+      "status": "completed",
+      "sale_date": "2026-04-17T11:38:42.038963",
+      "notes": "Transaction notes for sale #38",
+      "invoice_number": "INV-0038",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 39,
+      "sale_number": "SALE-0039",
+      "customer_id": 2,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 2,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 159.98
+        },
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 3,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 899.97
+        },
+        {
+          "product_id": 11,
+          "product_name": "Office Suite Pro",
+          "sku": "SW-011",
+          "quantity": 1,
+          "unit_price": 149.99,
+          "discount": 0,
+          "total_price": 149.99
+        },
+        {
+          "product_id": 10,
+          "product_name": "Phone Stand Adjustable",
+          "sku": "PH-010",
+          "quantity": 2,
+          "unit_price": 19.99,
+          "discount": 0,
+          "total_price": 39.98
+        }
+      ],
+      "subtotal": 1249.92,
+      "tax": 99.99360000000001,
+      "total": 1349.9136,
+      "discount": 0,
+      "payment_method": "transfer",
+      "status": "completed",
+      "sale_date": "2026-04-23T11:38:42.038976",
+      "notes": "Transaction notes for sale #39",
+      "invoice_number": "INV-0039",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 40,
+      "sale_number": "SALE-0040",
+      "customer_id": 2,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 1,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 999.99
+        },
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 2,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 1999.98
+        },
+        {
+          "product_id": 8,
+          "product_name": "Executive Pen Set",
+          "sku": "PS-008",
+          "quantity": 3,
+          "unit_price": 14.99,
+          "discount": 0,
+          "total_price": 44.97
+        },
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 79.99
+        },
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 2,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 1999.98
+        }
+      ],
+      "subtotal": 5124.91,
+      "tax": 409.9928,
+      "total": 5534.9028,
+      "discount": 0,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-02-12T11:38:42.038988",
+      "notes": "Transaction notes for sale #40",
+      "invoice_number": "INV-0040",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 41,
+      "sale_number": "SALE-0041",
+      "customer_id": 4,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 8,
+          "product_name": "Executive Pen Set",
+          "sku": "PS-008",
+          "quantity": 3,
+          "unit_price": 14.99,
+          "discount": 0,
+          "total_price": 44.97
+        },
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 1,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 999.99
+        }
+      ],
+      "subtotal": 1044.96,
+      "tax": 83.5968,
+      "total": 1128.5568,
+      "discount": 0,
+      "payment_method": "transfer",
+      "status": "completed",
+      "sale_date": "2026-02-09T11:38:42.039001",
+      "notes": "Transaction notes for sale #41",
+      "invoice_number": "INV-0041",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 42,
+      "sale_number": "SALE-0042",
+      "customer_id": 5,
+      "user_id": 1,
+      "items": [
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 3,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 2999.9700000000003
+        },
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 2,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 159.98
+        }
+      ],
+      "subtotal": 3159.9500000000003,
+      "tax": 252.79600000000002,
+      "total": 3412.746,
+      "discount": 0,
+      "payment_method": "transfer",
+      "status": "completed",
+      "sale_date": "2026-04-10T11:38:42.039012",
+      "notes": "Transaction notes for sale #42",
+      "invoice_number": "INV-0042",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 43,
+      "sale_number": "SALE-0043",
+      "customer_id": 5,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 11,
+          "product_name": "Office Suite Pro",
+          "sku": "SW-011",
+          "quantity": 2,
+          "unit_price": 149.99,
+          "discount": 0,
+          "total_price": 299.98
+        },
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 1,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 49.99
+        },
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 3,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 149.97
+        },
+        {
+          "product_id": 7,
+          "product_name": "Premium Notebook Set",
+          "sku": "NB-007",
+          "quantity": 3,
+          "unit_price": 9.99,
+          "discount": 0,
+          "total_price": 29.97
+        },
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 3,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 239.96999999999997
+        }
+      ],
+      "subtotal": 769.8800000000001,
+      "tax": 61.59040000000001,
+      "total": 831.4704000000002,
+      "discount": 0,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-04-24T11:38:42.039022",
+      "notes": "Transaction notes for sale #43",
+      "invoice_number": "INV-0043",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 44,
+      "sale_number": "SALE-0044",
+      "customer_id": 1,
+      "user_id": 2,
+      "items": [
+        {
+          "product_id": 5,
+          "product_name": "Executive Desk Chair",
+          "sku": "DC-005",
+          "quantity": 2,
+          "unit_price": 199.99,
+          "discount": 0,
+          "total_price": 399.98
+        }
+      ],
+      "subtotal": 399.98,
+      "tax": 31.998400000000004,
+      "total": 431.9784,
+      "discount": 0,
+      "payment_method": "transfer",
+      "status": "completed",
+      "sale_date": "2026-04-14T11:38:42.039036",
+      "notes": "Transaction notes for sale #44",
+      "invoice_number": "INV-0044",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 45,
+      "sale_number": "SALE-0045",
+      "customer_id": 5,
+      "user_id": 1,
+      "items": [
+        {
+          "product_id": 12,
+          "product_name": "Antivirus Premium",
+          "sku": "SW-012",
+          "quantity": 2,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 159.98
+        }
+      ],
+      "subtotal": 159.98,
+      "tax": 12.798399999999999,
+      "total": 172.77839999999998,
+      "discount": 0,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-02-11T11:38:42.039044",
+      "notes": "Transaction notes for sale #45",
+      "invoice_number": "INV-0045",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 46,
+      "sale_number": "SALE-0046",
+      "customer_id": 1,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 2,
+          "unit_price": 79.99,
+          "discount": 0,
+          "total_price": 159.98
+        },
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 3,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 899.97
+        },
+        {
+          "product_id": 8,
+          "product_name": "Executive Pen Set",
+          "sku": "PS-008",
+          "quantity": 2,
+          "unit_price": 14.99,
+          "discount": 0,
+          "total_price": 29.98
+        },
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 1,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 49.99
+        },
+        {
+          "product_id": 5,
+          "product_name": "Executive Desk Chair",
+          "sku": "DC-005",
+          "quantity": 3,
+          "unit_price": 199.99,
+          "discount": 0,
+          "total_price": 599.97
+        }
+      ],
+      "subtotal": 1565.901,
+      "tax": 125.27208,
+      "total": 1691.17308,
+      "discount": 173.98900000000003,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-02-04T11:38:42.039053",
+      "notes": "Transaction notes for sale #46",
+      "invoice_number": "INV-0046",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 47,
+      "sale_number": "SALE-0047",
+      "customer_id": 3,
+      "user_id": 2,
+      "items": [
+        {
+          "product_id": 6,
+          "product_name": "LED Desk Lamp",
+          "sku": "DL-006",
+          "quantity": 3,
+          "unit_price": 39.99,
+          "discount": 0,
+          "total_price": 119.97
+        },
+        {
+          "product_id": 6,
+          "product_name": "LED Desk Lamp",
+          "sku": "DL-006",
+          "quantity": 1,
+          "unit_price": 39.99,
+          "discount": 0,
+          "total_price": 39.99
+        },
+        {
+          "product_id": 1,
+          "product_name": "Laptop Pro 15\"",
+          "sku": "LP-001",
+          "quantity": 3,
+          "unit_price": 999.99,
+          "discount": 0,
+          "total_price": 2999.9700000000003
+        }
+      ],
+      "subtotal": 2843.9370000000004,
+      "tax": 227.51496000000003,
+      "total": 3071.4519600000003,
+      "discount": 315.99300000000005,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-04-08T11:38:42.039066",
+      "notes": "Transaction notes for sale #47",
+      "invoice_number": "INV-0047",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 48,
+      "sale_number": "SALE-0048",
+      "customer_id": 1,
+      "user_id": 4,
+      "items": [
+        {
+          "product_id": 5,
+          "product_name": "Executive Desk Chair",
+          "sku": "DC-005",
+          "quantity": 3,
+          "unit_price": 199.99,
+          "discount": 0,
+          "total_price": 599.97
+        },
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 1,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 299.99
+        },
+        {
+          "product_id": 8,
+          "product_name": "Executive Pen Set",
+          "sku": "PS-008",
+          "quantity": 2,
+          "unit_price": 14.99,
+          "discount": 0,
+          "total_price": 29.98
+        },
+        {
+          "product_id": 6,
+          "product_name": "LED Desk Lamp",
+          "sku": "DL-006",
+          "quantity": 3,
+          "unit_price": 39.99,
+          "discount": 0,
+          "total_price": 119.97
+        }
+      ],
+      "subtotal": 1049.91,
+      "tax": 83.9928,
+      "total": 1133.9028,
+      "discount": 0,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-02-20T11:38:42.039076",
+      "notes": "Transaction notes for sale #48",
+      "invoice_number": "INV-0048",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 49,
+      "sale_number": "SALE-0049",
+      "customer_id": 4,
+      "user_id": 1,
+      "items": [
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 2,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 599.98
+        },
+        {
+          "product_id": 10,
+          "product_name": "Phone Stand Adjustable",
+          "sku": "PH-010",
+          "quantity": 2,
+          "unit_price": 19.99,
+          "discount": 0,
+          "total_price": 39.98
+        },
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 1,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 49.99
+        },
+        {
+          "product_id": 11,
+          "product_name": "Office Suite Pro",
+          "sku": "SW-011",
+          "quantity": 1,
+          "unit_price": 149.99,
+          "discount": 0,
+          "total_price": 149.99
+        },
+        {
+          "product_id": 5,
+          "product_name": "Executive Desk Chair",
+          "sku": "DC-005",
+          "quantity": 3,
+          "unit_price": 199.99,
+          "discount": 0,
+          "total_price": 599.97
+        }
+      ],
+      "subtotal": 1439.91,
+      "tax": 115.1928,
+      "total": 1555.1028000000001,
+      "discount": 0,
+      "payment_method": "credit",
+      "status": "completed",
+      "sale_date": "2026-02-21T11:38:42.039087",
+      "notes": "Transaction notes for sale #49",
+      "invoice_number": "INV-0049",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 50,
+      "sale_number": "SALE-0050",
+      "customer_id": 1,
+      "user_id": 3,
+      "items": [
+        {
+          "product_id": 4,
+          "product_name": "4K Monitor 27\"",
+          "sku": "MN-004",
+          "quantity": 2,
+          "unit_price": 299.99,
+          "discount": 0,
+          "total_price": 599.98
+        },
+        {
+          "product_id": 11,
+          "product_name": "Office Suite Pro",
+          "sku": "SW-011",
+          "quantity": 1,
+          "unit_price": 149.99,
+          "discount": 0,
+          "total_price": 149.99
+        },
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 2,
+          "unit_price": 49.99,
+          "discount": 0,
+          "total_price": 99.98
+        },
+        {
+          "product_id": 5,
+          "product_name": "Executive Desk Chair",
+          "sku": "DC-005",
+          "quantity": 3,
+          "unit_price": 199.99,
+          "discount": 0,
+          "total_price": 599.97
+        }
+      ],
+      "subtotal": 1449.92,
+      "tax": 115.99360000000001,
+      "total": 1565.9136,
+      "discount": 0,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-03-12T11:38:42.039103",
+      "notes": "Transaction notes for sale #50",
+      "invoice_number": "INV-0050",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 51,
+      "sale_number": "SALE-0051",
+      "invoice_number": "INV-0051",
+      "customer_id": "1",
+      "user_id": 1,
+      "items": [
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "total_price": 79.99
+        }
+      ],
+      "subtotal": 79.99,
+      "tax": 6.3991999999999996,
+      "discount": 0.0,
+      "total": 86.38919999999999,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-05-05T11:43:17.798004",
+      "notes": "",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 52,
+      "sale_number": "SALE-0052",
+      "invoice_number": "INV-0052",
+      "customer_id": "6",
+      "user_id": 2,
+      "items": [
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "total_price": 79.99
+        }
+      ],
+      "subtotal": 79.99,
+      "tax": 6.3991999999999996,
+      "discount": 0.0,
+      "total": 86.38919999999999,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-05-05T12:30:25.107664",
+      "notes": "",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 53,
+      "sale_number": "SALE-0053",
+      "invoice_number": "INV-0053",
+      "customer_id": "6",
+      "user_id": 2,
+      "items": [
+        {
+          "product_id": 3,
+          "product_name": "Mechanical Keyboard",
+          "sku": "KB-003",
+          "quantity": 1,
+          "unit_price": 79.99,
+          "total_price": 79.99
+        },
+        {
+          "product_id": 6,
+          "product_name": "LED Desk Lamp",
+          "sku": "DL-006",
+          "quantity": 1,
+          "unit_price": 39.99,
+          "total_price": 39.99
+        }
+      ],
+      "subtotal": 119.97999999999999,
+      "tax": 9.5984,
+      "discount": 0.0,
+      "total": 129.5784,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-05-05T12:31:28.229038",
+      "notes": "",
+      "shipping_address": null,
+      "billing_address": null
+    },
+    {
+      "id": 54,
+      "sale_number": "SALE-0054",
+      "invoice_number": "INV-0054",
+      "customer_id": "6",
+      "user_id": 2,
+      "items": [
+        {
+          "product_id": 6,
+          "product_name": "LED Desk Lamp",
+          "sku": "DL-006",
+          "quantity": 1,
+          "unit_price": 39.99,
+          "total_price": 39.99
+        },
+        {
+          "product_id": 9,
+          "product_name": "USB-C Hub 7-in-1",
+          "sku": "UH-009",
+          "quantity": 1,
+          "unit_price": 49.99,
+          "total_price": 49.99
+        }
+      ],
+      "subtotal": 89.98,
+      "tax": 7.1984,
+      "discount": 0.0,
+      "total": 97.17840000000001,
+      "payment_method": "cash",
+      "status": "completed",
+      "sale_date": "2026-05-05T12:31:51.037593",
+      "notes": "",
+      "shipping_address": null,
+      "billing_address": null
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "email": "john.smith@email.com",
+      "phone": "+1-555-0101",
+      "address": "123 Main Street",
+      "city": "New York",
+      "state": "NY",
+      "zip": "10001",
+      "country": "USA",
+      "company": "ABC Corporation",
+      "customer_type": "business",
+      "credit_limit": 5000.0,
+      "created_at": "2026-05-05T11:38:42.038341"
+    },
+    {
+      "id": 2,
+      "name": "Sarah Johnson",
+      "email": "sarah.j@email.com",
+      "phone": "+1-555-0102",
+      "address": "456 Oak Avenue",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90210",
+      "country": "USA",
+      "company": "Individual",
+      "customer_type": "individual",
+      "credit_limit": 1000.0,
+      "created_at": "2026-05-05T11:38:42.038345"
+    },
+    {
+      "id": 3,
+      "name": "Mike Wilson",
+      "email": "mike.wilson@email.com",
+      "phone": "+1-555-0103",
+      "address": "789 Pine Road",
+      "city": "Chicago",
+      "state": "IL",
+      "zip": "60601",
+      "country": "USA",
+      "company": "XYZ Enterprises",
+      "customer_type": "business",
+      "credit_limit": 10000.0,
+      "created_at": "2026-05-05T11:38:42.038349"
+    },
+    {
+      "id": 4,
+      "name": "Emily Davis",
+      "email": "emily.d@email.com",
+      "phone": "+1-555-0104",
+      "address": "321 Elm Street",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77001",
+      "country": "USA",
+      "company": "Individual",
+      "customer_type": "individual",
+      "credit_limit": 500.0,
+      "created_at": "2026-05-05T11:38:42.038352"
+    },
+    {
+      "id": 5,
+      "name": "Robert Brown",
+      "email": "robert.brown@email.com",
+      "phone": "+1-555-0105",
+      "address": "654 Maple Drive",
+      "city": "Phoenix",
+      "state": "AZ",
+      "zip": "85001",
+      "country": "USA",
+      "company": "Global Solutions Inc",
+      "customer_type": "business",
+      "credit_limit": 15000.0,
+      "created_at": "2026-05-05T11:38:42.038356"
+    },
+    {
+      "id": 6,
+      "name": "Mayuri Santosh Futane",
+      "email": "futanemayuri0@gmail.com",
+      "phone": "09225524339",
+      "address": "Chhatrapati Sambhajinagar",
+      "city": "",
+      "state": "",
+      "zip": "",
+      "country": "USA",
+      "company": "Individual",
+      "customer_type": "regular",
+      "credit_limit": 0.0,
+      "created_at": "2026-05-05T12:30:00.117958"
+    }
+  ],
+  "inventory_transactions": [
+    {
+      "id": 1,
+      "product_id": 1,
+      "transaction_type": "initial",
+      "quantity": 15,
+      "reference": "Initial Stock Setup",
+      "user_id": 1,
+      "timestamp": "2026-05-05T11:38:42.039115",
+      "notes": "Initial stock for Laptop Pro 15\""
+    },
+    {
+      "id": 2,
+      "product_id": 2,
+      "transaction_type": "initial",
+      "quantity": 50,
+      "reference": "Initial Stock Setup",
+      "user_id": 1,
+      "timestamp": "2026-05-05T11:38:42.039119",
+      "notes": "Initial stock for Wireless Mouse"
+    },
+    {
+      "id": 3,
+      "product_id": 3,
+      "transaction_type": "initial",
+      "quantity": 30,
+      "reference": "Initial Stock Setup",
+      "user_id": 1,
+      "timestamp": "2026-05-05T11:38:42.039122",
+      "notes": "Initial stock for Mechanical Keyboard"
+    },
+    {
+      "id": 4,
+      "product_id": 4,
+      "transaction_type": "initial",
+      "quantity": 20,
+      "reference": "Initial Stock Setup",
+      "user_id": 1,
+      "timestamp": "2026-05-05T11:38:42.039124",
+      "notes": "Initial stock for 4K Monitor 27\""
+    },
+    {
+      "id": 5,
+      "product_id": 5,
+      "transaction_type": "initial",
+      "quantity": 10,
+      "reference": "Initial Stock Setup",
+      "user_id": 1,
+      "timestamp": "2026-05-05T11:38:42.039126",
+      "notes": "Initial stock for Executive Desk Chair"
+    },
+    {
+      "id": 6,
+      "product_id": 6,
+      "transaction_type": "initial",
+      "quantity": 25,
+      "reference": "Initial Stock Setup",
+      "user_id": 1,
+      "timestamp": "2026-05-05T11:38:42.039128",
+      "notes": "Initial stock for LED Desk Lamp"
+    },
+    {
+      "id": 7,
+      "product_id": 7,
+      "transaction_type": "initial",
+      "quantity": 100,
+      "reference": "Initial Stock Setup",
+      "user_id": 1,
+      "timestamp": "2026-05-05T11:38:42.039130",
+      "notes": "Initial stock for Premium Notebook Set"
+    },
+    {
+      "id": 8,
+      "product_id": 8,
+      "transaction_type": "initial",
+      "quantity": 75,
+      "reference": "Initial Stock Setup",
+      "user_id": 1,
+      "timestamp": "2026-05-05T11:38:42.039133",
+      "notes": "Initial stock for Executive Pen Set"
+    },
+    {
+      "id": 9,
+      "product_id": 9,
+      "transaction_type": "initial",
+      "quantity": 40,
+      "reference": "Initial Stock Setup",
+      "user_id": 1,
+      "timestamp": "2026-05-05T11:38:42.039135",
+      "notes": "Initial stock for USB-C Hub 7-in-1"
+    },
+    {
+      "id": 10,
+      "product_id": 10,
+      "transaction_type": "initial",
+      "quantity": 60,
+      "reference": "Initial Stock Setup",
+      "user_id": 1,
+      "timestamp": "2026-05-05T11:38:42.039137",
+      "notes": "Initial stock for Phone Stand Adjustable"
+    },
+    {
+      "id": 11,
+      "product_id": 11,
+      "transaction_type": "initial",
+      "quantity": 999,
+      "reference": "Initial Stock Setup",
+      "user_id": 1,
+      "timestamp": "2026-05-05T11:38:42.039139",
+      "notes": "Initial stock for Office Suite Pro"
+    },
+    {
+      "id": 12,
+      "product_id": 12,
+      "transaction_type": "initial",
+      "quantity": 999,
+      "reference": "Initial Stock Setup",
+      "user_id": 1,
+      "timestamp": "2026-05-05T11:38:42.039141",
+      "notes": "Initial stock for Antivirus Premium"
+    },
+    {
+      "id": 13,
+      "product_id": 11,
+      "transaction_type": "adjustment",
+      "quantity": 6,
+      "reference": "Stock Adjustment #1",
+      "user_id": 3,
+      "timestamp": "2026-04-15T11:38:42.039147",
+      "notes": "Inventory adjustment for Office Suite Pro"
+    },
+    {
+      "id": 14,
+      "product_id": 8,
+      "transaction_type": "adjustment",
+      "quantity": 4,
+      "reference": "Stock Adjustment #2",
+      "user_id": 1,
+      "timestamp": "2026-04-22T11:38:42.039154",
+      "notes": "Inventory adjustment for Executive Pen Set"
+    },
+    {
+      "id": 15,
+      "product_id": 10,
+      "transaction_type": "adjustment",
+      "quantity": -2,
+      "reference": "Stock Adjustment #3",
+      "user_id": 2,
+      "timestamp": "2026-04-17T11:38:42.039160",
+      "notes": "Inventory adjustment for Phone Stand Adjustable"
+    },
+    {
+      "id": 16,
+      "product_id": 2,
+      "transaction_type": "adjustment",
+      "quantity": 6,
+      "reference": "Stock Adjustment #4",
+      "user_id": 2,
+      "timestamp": "2026-04-07T11:38:42.039165",
+      "notes": "Inventory adjustment for Wireless Mouse"
+    },
+    {
+      "id": 17,
+      "product_id": 4,
+      "transaction_type": "adjustment",
+      "quantity": -5,
+      "reference": "Stock Adjustment #5",
+      "user_id": 1,
+      "timestamp": "2026-04-17T11:38:42.039171",
+      "notes": "Inventory adjustment for 4K Monitor 27\""
+    },
+    {
+      "id": 18,
+      "product_id": 4,
+      "transaction_type": "adjustment",
+      "quantity": -4,
+      "reference": "Stock Adjustment #6",
+      "user_id": 4,
+      "timestamp": "2026-04-29T11:38:42.039176",
+      "notes": "Inventory adjustment for 4K Monitor 27\""
+    },
+    {
+      "id": 19,
+      "product_id": 7,
+      "transaction_type": "adjustment",
+      "quantity": -1,
+      "reference": "Stock Adjustment #7",
+      "user_id": 3,
+      "timestamp": "2026-04-26T11:38:42.039181",
+      "notes": "Inventory adjustment for Premium Notebook Set"
+    },
+    {
+      "id": 20,
+      "product_id": 7,
+      "transaction_type": "adjustment",
+      "quantity": 9,
+      "reference": "Stock Adjustment #8",
+      "user_id": 3,
+      "timestamp": "2026-04-11T11:38:42.039186",
+      "notes": "Inventory adjustment for Premium Notebook Set"
+    },
+    {
+      "id": 21,
+      "product_id": 3,
+      "transaction_type": "adjustment",
+      "quantity": 1,
+      "reference": "Stock Adjustment #9",
+      "user_id": 2,
+      "timestamp": "2026-04-05T11:38:42.039191",
+      "notes": "Inventory adjustment for Mechanical Keyboard"
+    },
+    {
+      "id": 22,
+      "product_id": 9,
+      "transaction_type": "adjustment",
+      "quantity": -1,
+      "reference": "Stock Adjustment #10",
+      "user_id": 2,
+      "timestamp": "2026-04-27T11:38:42.039196",
+      "notes": "Inventory adjustment for USB-C Hub 7-in-1"
+    },
+    {
+      "id": 23,
+      "product_id": 4,
+      "transaction_type": "adjustment",
+      "quantity": 0,
+      "reference": "Stock Adjustment #11",
+      "user_id": 3,
+      "timestamp": "2026-04-13T11:38:42.039200",
+      "notes": "Inventory adjustment for 4K Monitor 27\""
+    },
+    {
+      "id": 24,
+      "product_id": 6,
+      "transaction_type": "adjustment",
+      "quantity": -1,
+      "reference": "Stock Adjustment #12",
+      "user_id": 3,
+      "timestamp": "2026-04-09T11:38:42.039205",
+      "notes": "Inventory adjustment for LED Desk Lamp"
+    },
+    {
+      "id": 25,
+      "product_id": 11,
+      "transaction_type": "adjustment",
+      "quantity": 8,
+      "reference": "Stock Adjustment #13",
+      "user_id": 2,
+      "timestamp": "2026-04-13T11:38:42.039209",
+      "notes": "Inventory adjustment for Office Suite Pro"
+    },
+    {
+      "id": 26,
+      "product_id": 9,
+      "transaction_type": "adjustment",
+      "quantity": 10,
+      "reference": "Stock Adjustment #14",
+      "user_id": 3,
+      "timestamp": "2026-04-06T11:38:42.039214",
+      "notes": "Inventory adjustment for USB-C Hub 7-in-1"
+    },
+    {
+      "id": 27,
+      "product_id": 5,
+      "transaction_type": "adjustment",
+      "quantity": 8,
+      "reference": "Stock Adjustment #15",
+      "user_id": 1,
+      "timestamp": "2026-04-16T11:38:42.039218",
+      "notes": "Inventory adjustment for Executive Desk Chair"
+    },
+    {
+      "id": 28,
+      "product_id": 12,
+      "transaction_type": "adjustment",
+      "quantity": 8,
+      "reference": "Stock Adjustment #16",
+      "user_id": 4,
+      "timestamp": "2026-04-11T11:38:42.039223",
+      "notes": "Inventory adjustment for Antivirus Premium"
+    },
+    {
+      "id": 29,
+      "product_id": 10,
+      "transaction_type": "adjustment",
+      "quantity": -4,
+      "reference": "Stock Adjustment #17",
+      "user_id": 1,
+      "timestamp": "2026-04-22T11:38:42.039227",
+      "notes": "Inventory adjustment for Phone Stand Adjustable"
+    },
+    {
+      "id": 30,
+      "product_id": 5,
+      "transaction_type": "adjustment",
+      "quantity": 5,
+      "reference": "Stock Adjustment #18",
+      "user_id": 4,
+      "timestamp": "2026-04-26T11:38:42.039232",
+      "notes": "Inventory adjustment for Executive Desk Chair"
+    },
+    {
+      "id": 31,
+      "product_id": 1,
+      "transaction_type": "adjustment",
+      "quantity": 6,
+      "reference": "Stock Adjustment #19",
+      "user_id": 4,
+      "timestamp": "2026-04-12T11:38:42.039238",
+      "notes": "Inventory adjustment for Laptop Pro 15\""
+    },
+    {
+      "id": 32,
+      "product_id": 9,
+      "transaction_type": "adjustment",
+      "quantity": 5,
+      "reference": "Stock Adjustment #20",
+      "user_id": 4,
+      "timestamp": "2026-04-24T11:38:42.039243",
+      "notes": "Inventory adjustment for USB-C Hub 7-in-1"
+    },
+    {
+      "id": 33,
+      "product_id": 3,
+      "transaction_type": "sale",
+      "quantity": -1,
+      "reference": "Sale SALE-0051",
+      "user_id": 1,
+      "timestamp": "2026-05-05T11:43:17.798100",
+      "notes": "Product sold: Mechanical Keyboard"
+    },
+    {
+      "id": 34,
+      "product_id": 3,
+      "transaction_type": "sale",
+      "quantity": -1,
+      "reference": "Sale SALE-0052",
+      "user_id": 2,
+      "timestamp": "2026-05-05T12:30:25.108108",
+      "notes": "Product sold: Mechanical Keyboard"
+    },
+    {
+      "id": 35,
+      "product_id": 3,
+      "transaction_type": "sale",
+      "quantity": -1,
+      "reference": "Sale SALE-0053",
+      "user_id": 2,
+      "timestamp": "2026-05-05T12:31:28.229074",
+      "notes": "Product sold: Mechanical Keyboard"
+    },
+    {
+      "id": 36,
+      "product_id": 6,
+      "transaction_type": "sale",
+      "quantity": -1,
+      "reference": "Sale SALE-0053",
+      "user_id": 2,
+      "timestamp": "2026-05-05T12:31:28.229091",
+      "notes": "Product sold: LED Desk Lamp"
+    },
+    {
+      "id": 37,
+      "product_id": 6,
+      "transaction_type": "sale",
+      "quantity": -1,
+      "reference": "Sale SALE-0054",
+      "user_id": 2,
+      "timestamp": "2026-05-05T12:31:51.037621",
+      "notes": "Product sold: LED Desk Lamp"
+    },
+    {
+      "id": 38,
+      "product_id": 9,
+      "transaction_type": "sale",
+      "quantity": -1,
+      "reference": "Sale SALE-0054",
+      "user_id": 2,
+      "timestamp": "2026-05-05T12:31:51.037629",
+      "notes": "Product sold: USB-C Hub 7-in-1"
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "action": "system_initialized",
+      "table": "system",
+      "record_id": null,
+      "old_values": null,
+      "new_values": null,
+      "timestamp": "2026-05-05T11:38:42.039246",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "action": "data_import",
+      "table": "products",
+      "record_id": null,
+      "old_values": null,
+      "new_values": {
+        "count": 12
+      },
+      "timestamp": "2026-05-05T11:38:42.039250",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "action": "login",
+      "table": "users",
+      "record_id": 1,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T11:42:33.030526"
+      },
+      "timestamp": "2026-05-05T11:42:33.030556",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 4,
+      "user_id": 1,
+      "action": "update",
+      "table": "products",
+      "record_id": 1,
+      "old_values": {
+        "id": 1,
+        "name": "Laptop Pro 15\"",
+        "sku": "LP-001",
+        "barcode": "123456789001",
+        "price": 999.99,
+        "cost": 750.0,
+        "stock": 15,
+        "min_stock": 5,
+        "category_id": 1,
+        "supplier": "TechSupplier Inc",
+        "description": "High-performance laptop with 16GB RAM and 512GB SSD",
+        "weight": 2.5,
+        "dimensions": "35.5 x 23.5 x 1.8 cm",
+        "warranty": "2 years",
+        "active": true,
+        "created_at": "2026-05-05T11:38:42.038280"
+      },
+      "new_values": {
+        "id": 1,
+        "name": "Laptop Pro 15\"",
+        "sku": "LP-001",
+        "barcode": "123456789001",
+        "price": 999.99,
+        "cost": 750.0,
+        "stock": 15,
+        "min_stock": 5,
+        "category_id": 1,
+        "supplier": "TechSupplier Inc",
+        "description": "High-performance laptop with 16GB RAM and 512GB SSD",
+        "weight": 2.5,
+        "dimensions": "35.5 x 23.5 x 1.8 cm",
+        "warranty": "2 years",
+        "active": true,
+        "created_at": "2026-05-05T11:38:42.038280"
+      },
+      "timestamp": "2026-05-05T11:42:47.654971",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "action": "create",
+      "table": "sales",
+      "record_id": 51,
+      "old_values": null,
+      "new_values": {
+        "sale_number": "SALE-0051",
+        "total": 86.38919999999999
+      },
+      "timestamp": "2026-05-05T11:43:17.798163",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 6,
+      "user_id": 1,
+      "action": "logout",
+      "table": "users",
+      "record_id": 1,
+      "old_values": null,
+      "new_values": {
+        "logout_time": "2026-05-05T11:43:33.415810"
+      },
+      "timestamp": "2026-05-05T11:43:33.415825",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 7,
+      "user_id": 2,
+      "action": "login",
+      "table": "users",
+      "record_id": 2,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T11:43:48.523676"
+      },
+      "timestamp": "2026-05-05T11:43:48.523693",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 8,
+      "user_id": 2,
+      "action": "logout",
+      "table": "users",
+      "record_id": 2,
+      "old_values": null,
+      "new_values": {
+        "logout_time": "2026-05-05T11:44:23.660869"
+      },
+      "timestamp": "2026-05-05T11:44:23.660885",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 9,
+      "user_id": 3,
+      "action": "login",
+      "table": "users",
+      "record_id": 3,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T11:44:36.778297"
+      },
+      "timestamp": "2026-05-05T11:44:36.778313",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 10,
+      "user_id": 3,
+      "action": "logout",
+      "table": "users",
+      "record_id": 3,
+      "old_values": null,
+      "new_values": {
+        "logout_time": "2026-05-05T11:44:53.882605"
+      },
+      "timestamp": "2026-05-05T11:44:53.882619",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 11,
+      "user_id": 1,
+      "action": "login",
+      "table": "users",
+      "record_id": 1,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T11:47:43.622206"
+      },
+      "timestamp": "2026-05-05T11:47:43.622223",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 12,
+      "user_id": 1,
+      "action": "logout",
+      "table": "users",
+      "record_id": 1,
+      "old_values": null,
+      "new_values": {
+        "logout_time": "2026-05-05T11:49:15.415701"
+      },
+      "timestamp": "2026-05-05T11:49:15.415714",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 13,
+      "user_id": 1,
+      "action": "login",
+      "table": "users",
+      "record_id": 1,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T11:53:53.755267"
+      },
+      "timestamp": "2026-05-05T11:53:53.755287",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 14,
+      "user_id": 1,
+      "action": "logout",
+      "table": "users",
+      "record_id": 1,
+      "old_values": null,
+      "new_values": {
+        "logout_time": "2026-05-05T11:56:05.335115"
+      },
+      "timestamp": "2026-05-05T11:56:05.335132",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 15,
+      "user_id": 3,
+      "action": "register",
+      "table": "users",
+      "record_id": 3,
+      "old_values": null,
+      "new_values": {
+        "username": "Mayuri",
+        "email": "futanemayuri0@gmail.com",
+        "role": "customer"
+      },
+      "timestamp": "2026-05-05T12:09:55.026780",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 16,
+      "user_id": 3,
+      "action": "login",
+      "table": "users",
+      "record_id": 3,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T12:10:01.352715"
+      },
+      "timestamp": "2026-05-05T12:10:01.352736",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 17,
+      "user_id": 3,
+      "action": "logout",
+      "table": "users",
+      "record_id": 3,
+      "old_values": null,
+      "new_values": {
+        "logout_time": "2026-05-05T12:12:34.640648"
+      },
+      "timestamp": "2026-05-05T12:12:34.640667",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 18,
+      "user_id": 1,
+      "action": "login",
+      "table": "users",
+      "record_id": 1,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T12:12:48.664439"
+      },
+      "timestamp": "2026-05-05T12:12:48.664459",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 19,
+      "user_id": 1,
+      "action": "logout",
+      "table": "users",
+      "record_id": 1,
+      "old_values": null,
+      "new_values": {
+        "logout_time": "2026-05-05T12:15:22.086447"
+      },
+      "timestamp": "2026-05-05T12:15:22.086459",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 20,
+      "user_id": 3,
+      "action": "login",
+      "table": "users",
+      "record_id": 3,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T12:15:26.902904"
+      },
+      "timestamp": "2026-05-05T12:15:26.902927",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 21,
+      "user_id": 2,
+      "action": "login",
+      "table": "users",
+      "record_id": 2,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T12:17:30.637078"
+      },
+      "timestamp": "2026-05-05T12:17:30.637100",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 22,
+      "user_id": 2,
+      "action": "logout",
+      "table": "users",
+      "record_id": 2,
+      "old_values": null,
+      "new_values": {
+        "logout_time": "2026-05-05T12:23:04.244256"
+      },
+      "timestamp": "2026-05-05T12:23:04.244563",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 23,
+      "user_id": 1,
+      "action": "login",
+      "table": "users",
+      "record_id": 1,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T12:23:12.687723"
+      },
+      "timestamp": "2026-05-05T12:23:12.687757",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 24,
+      "user_id": 1,
+      "action": "logout",
+      "table": "users",
+      "record_id": 1,
+      "old_values": null,
+      "new_values": {
+        "logout_time": "2026-05-05T12:25:00.478072"
+      },
+      "timestamp": "2026-05-05T12:25:00.478087",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 25,
+      "user_id": 3,
+      "action": "login",
+      "table": "users",
+      "record_id": 3,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T12:25:09.268408"
+      },
+      "timestamp": "2026-05-05T12:25:09.268431",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 26,
+      "user_id": 3,
+      "action": "logout",
+      "table": "users",
+      "record_id": 3,
+      "old_values": null,
+      "new_values": {
+        "logout_time": "2026-05-05T12:25:45.447961"
+      },
+      "timestamp": "2026-05-05T12:25:45.447976",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 27,
+      "user_id": 2,
+      "action": "login",
+      "table": "users",
+      "record_id": 2,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T12:25:49.998466"
+      },
+      "timestamp": "2026-05-05T12:25:49.998480",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 28,
+      "user_id": 2,
+      "action": "login",
+      "table": "users",
+      "record_id": 2,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T12:29:36.048869"
+      },
+      "timestamp": "2026-05-05T12:29:36.048886",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 29,
+      "user_id": 2,
+      "action": "create",
+      "table": "customers",
+      "record_id": 6,
+      "old_values": null,
+      "new_values": {
+        "name": "Mayuri Santosh Futane",
+        "email": "futanemayuri0@gmail.com"
+      },
+      "timestamp": "2026-05-05T12:30:00.118664",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 30,
+      "user_id": 2,
+      "action": "create",
+      "table": "sales",
+      "record_id": 52,
+      "old_values": null,
+      "new_values": {
+        "sale_number": "SALE-0052",
+        "total": 86.38919999999999
+      },
+      "timestamp": "2026-05-05T12:30:25.108131",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 31,
+      "user_id": 2,
+      "action": "create",
+      "table": "sales",
+      "record_id": 53,
+      "old_values": null,
+      "new_values": {
+        "sale_number": "SALE-0053",
+        "total": 129.5784
+      },
+      "timestamp": "2026-05-05T12:31:28.229104",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 32,
+      "user_id": 2,
+      "action": "create",
+      "table": "sales",
+      "record_id": 54,
+      "old_values": null,
+      "new_values": {
+        "sale_number": "SALE-0054",
+        "total": 97.17840000000001
+      },
+      "timestamp": "2026-05-05T12:31:51.037634",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 33,
+      "user_id": 2,
+      "action": "logout",
+      "table": "users",
+      "record_id": 2,
+      "old_values": null,
+      "new_values": {
+        "logout_time": "2026-05-05T12:33:13.019474"
+      },
+      "timestamp": "2026-05-05T12:33:13.019488",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 34,
+      "user_id": 3,
+      "action": "login",
+      "table": "users",
+      "record_id": 3,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T12:33:17.899650"
+      },
+      "timestamp": "2026-05-05T12:33:17.899669",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 35,
+      "user_id": 3,
+      "action": "logout",
+      "table": "users",
+      "record_id": 3,
+      "old_values": null,
+      "new_values": {
+        "logout_time": "2026-05-05T12:35:28.849838"
+      },
+      "timestamp": "2026-05-05T12:35:28.849852",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 36,
+      "user_id": 2,
+      "action": "login",
+      "table": "users",
+      "record_id": 2,
+      "old_values": null,
+      "new_values": {
+        "login_time": "2026-05-05T12:35:35.468993"
+      },
+      "timestamp": "2026-05-05T12:35:35.469013",
+      "ip_address": "127.0.0.1"
+    },
+    {
+      "id": 37,
+      "user_id": 2,
+      "action": "logout",
+      "table": "users",
+      "record_id": 2,
+      "old_values": null,
+      "new_values": {
+        "logout_time": "2026-05-05T13:04:19.290235"
+      },
+      "timestamp": "2026-05-05T13:04:19.290250",
+      "ip_address": "127.0.0.1"
+    }
+  ],
+  "settings": {
+    "company_name": "E-Commerce Monitoring System",
+    "tax_rate": 0.08,
+    "currency": "USD",
+    "low_stock_threshold": 10,
+    "loyalty_points_per_dollar": 1,
+    "welcome_bonus_points": 100
+  },
+  "customer_profiles": [
+    {
+      "id": 3,
+      "user_id": 3,
+      "phone": "9225524339",
+      "address": "",
+      "city": "",
+      "state": "",
+      "zip_code": "",
+      "country": "",
+      "loyalty_points": 100,
+      "loyalty_tier": "Bronze",
+      "total_orders": 0,
+      "total_spent": 0.0,
+      "wishlist_count": 0,
+      "email_notifications": true,
+      "sms_notifications": false,
+      "created_at": "2026-05-05T12:09:55.026315",
+      "updated_at": "2026-05-05T12:09:55.026319"
+    }
+  ],
+  "shopping_carts": [
+    {
+      "id": 3,
+      "customer_id": 3,
+      "items": [
+        {
+          "product_id": 1,
+          "name": "Laptop Pro 15\"",
+          "price": 999.99,
+          "quantity": 8,
+          "subtotal": 999.99
+        },
+        {
+          "product_id": 2,
+          "name": "Wireless Mouse",
+          "price": 25.99,
+          "quantity": 1,
+          "subtotal": 25.99
+        }
+      ],
+      "total": 1025.98,
+      "created_at": "2026-05-05T12:09:55.026326",
+      "updated_at": "2026-05-05T12:34:41.815862"
+    }
+  ],
+  "wishlists": [
+    {
+      "id": 3,
+      "customer_id": 3,
+      "items": [
+        {
+          "product_id": 3,
+          "name": "Mechanical Keyboard",
+          "price": 79.99,
+          "added_at": "2026-05-05T12:16:16.601787"
+        }
+      ],
+      "created_at": "2026-05-05T12:09:55.026334",
+      "updated_at": "2026-05-05T12:16:16.601797"
+    }
+  ],
+  "customer_reviews": [
+    {
+      "id": 1,
+      "customer_id": 1,
+      "product_id": 1,
+      "rating": 5,
+      "review": "Excellent laptop! Very fast and reliable.",
+      "created_at": "2026-05-05T12:00:00.000000"
+    },
+    {
+      "id": 2,
+      "customer_id": 2,
+      "product_id": 2,
+      "rating": 4,
+      "review": "Good mouse, comfortable to use.",
+      "created_at": "2026-05-05T12:00:00.000000"
+    }
+  ],
+  "loyalty_programs": [
+    {
+      "id": 1,
+      "name": "Bronze",
+      "points_required": 0,
+      "discount_percent": 0,
+      "benefits": [
+        "Basic rewards"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Silver",
+      "points_required": 500,
+      "discount_percent": 5,
+      "benefits": [
+        "5% discount",
+        "Free shipping on orders over $50"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Gold",
+      "points_required": 1000,
+      "discount_percent": 10,
+      "benefits": [
+        "10% discount",
+        "Free shipping",
+        "Early access to sales"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Platinum",
+      "points_required": 2500,
+      "discount_percent": 15,
+      "benefits": [
+        "15% discount",
+        "Free shipping",
+        "Early access",
+        "Exclusive products"
+      ]
+    }
+  ],
+  "support_tickets": []
+}
